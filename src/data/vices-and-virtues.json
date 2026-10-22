@@ -4,7 +4,7 @@
   "artist": "Panic! At The Disco",
   "release_date": "2011-03-22",
   "total_tracks": 12,
-  "image": "../../assets/images/vices-and-virtues.jpg",
+  "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/Panic%21_at_the_Disco_-_Vices_%26_Virtues.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
   "tracks": [
     {
       "id": "vices-virtues-01",
