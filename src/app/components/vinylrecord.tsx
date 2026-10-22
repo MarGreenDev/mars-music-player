@@ -49,6 +49,8 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         alignItems: 'center',
         justifyContent: 'center',
+        borderColor: '#8C5B3E',
+        borderWidth: 2
     },
 
     cover: {

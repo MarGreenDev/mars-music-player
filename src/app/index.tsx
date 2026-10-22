@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import MediaControls from "./components/mediaControls";
 import VinylRecord from "./components/vinylrecord";
 
 export default function Index() {
@@ -11,6 +12,8 @@ export default function Index() {
         <Text style={styles.title}>Now Playing</Text>
         <Text style={styles.artist}>Panic! At The Disco</Text>
       </View>
+
+      <MediaControls />
     </View>
   );
 }
@@ -18,7 +21,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3B2922',
+    backgroundColor: '#593E2E',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 24,
