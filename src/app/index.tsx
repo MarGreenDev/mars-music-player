@@ -1,10 +1,16 @@
+import { Link, useRouter } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 import MediaControls from "./components/mediaControls";
 import VinylRecord from "./components/vinylrecord";
 
 export default function Index() {
+  const router = useRouter;
+
   return (
     <View style={styles.container}>
+      <Link href="/songsList">
+        <Text>View songs</Text>
+      </Link>
 
       <VinylRecord />
 

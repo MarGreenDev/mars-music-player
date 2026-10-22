@@ -1,0 +1,118 @@
+{
+  "album_type": "album",
+  "name": "Vices & Virtues",
+  "artist": "Panic! At The Disco",
+  "release_date": "2011-03-22",
+  "total_tracks": 12,
+  "image": "../../assets/images/vices-and-virtues.jpg",
+  "tracks": [
+    {
+      "id": "vices-virtues-01",
+      "track_number": 1,
+      "name": "The Ballad of Mona Lisa",
+      "duration_ms": 226000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-02",
+      "track_number": 2,
+      "name": "Let's Kill Tonight",
+      "duration_ms": 213000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-03",
+      "track_number": 3,
+      "name": "Hurricane",
+      "duration_ms": 265000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-04",
+      "track_number": 4,
+      "name": "Memories",
+      "duration_ms": 205000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-05",
+      "track_number": 5,
+      "name": "Trade Mistakes",
+      "duration_ms": 216000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-06",
+      "track_number": 6,
+      "name": "Ready to Go (Get Me Out of My Mind)",
+      "duration_ms": 217000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-07",
+      "track_number": 7,
+      "name": "Always",
+      "duration_ms": 153000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-08",
+      "track_number": 8,
+      "name": "The Calendar",
+      "duration_ms": 283000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-09",
+      "track_number": 9,
+      "name": "Sarah Smiles",
+      "duration_ms": 213000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-10",
+      "track_number": 10,
+      "name": "Nearly Witches (Ever Since We Met...)",
+      "duration_ms": 256000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-11",
+      "track_number": 11,
+      "name": "I Wanna Be Free",
+      "duration_ms": 164000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    },
+    {
+      "id": "vices-virtues-12",
+      "track_number": 12,
+      "name": "Turn Off the Lights",
+      "duration_ms": 239000,
+      "artists": [
+        "Panic! At The Disco"
+      ]
+    }
+  ]
+}
