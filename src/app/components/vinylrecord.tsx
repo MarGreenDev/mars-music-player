@@ -1,12 +1,12 @@
 
+import { ImageBackground } from 'expo-image';
 import { Image, StyleSheet, View } from 'react-native';
 
 export default function VinylRecord() {
     return (
-        <View style={styles.vinyl}>
-            <View style={styles.groove1} />
-            <View style={styles.groove2} />
-            <View style={styles.groove3} />
+        <ImageBackground
+            source={require('../../../assets/images/vinyl.png')}
+            style={styles.vinyl}>
 
             <View style={styles.label}>
                 <Image
@@ -17,7 +17,7 @@ export default function VinylRecord() {
 
                 <View style={styles.hole} />
             </View>
-        </View>
+        </ImageBackground>
     );
 }
 
@@ -40,33 +40,6 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.4,
         shadowRadius: 10,
-    },
-
-    groove1: {
-        position: 'absolute',
-        width: '90%',
-        height: '90%',
-        borderRadius: 999,
-        borderWidth: 1,
-        borderColor: '#303030',
-    },
-
-    groove2: {
-        position: 'absolute',
-        width: '78%',
-        height: '78%',
-        borderRadius: 999,
-        borderWidth: 1,
-        borderColor: '#303030',
-    },
-
-    groove3: {
-        position: 'absolute',
-        width: '66%',
-        height: '66%',
-        borderRadius: 999,
-        borderWidth: 1,
-        borderColor: '#303030',
     },
 
     label: {
