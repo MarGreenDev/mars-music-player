@@ -8,9 +8,13 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <Link href="/songsList">
-        <Text>View songs</Text>
-      </Link>
+
+      <View >
+        <Link href="/songsList" style={styles.songListButton}>
+          <Text>View songs</Text>
+        </Link>
+
+      </View>
 
       <VinylRecord />
 
@@ -31,6 +35,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 24,
+  },
+  songListButton: {
+    backgroundColor: 'rgba(140, 91, 62, 0.7)',
+    color: '#F5E9D5',
+    fontWeight: 'bold',
+    padding: 12,
+    borderRadius: 50,
+    position: 'absolute',
+    bottom: 80,
+    right: 50,
   },
   vinyl: {
     width: 250,
