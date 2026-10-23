@@ -24,7 +24,7 @@ export default function MediaControls({
                         source={
                             isPlaying
                                 ? require('../../../assets/images/icons/pause.png')
-                                : require('../../../assets/images/icons/pause.png')
+                                : require('../../../assets/images/icons/play.png')
                         }
                         style={styles.pauseButtonIcon}
                     />

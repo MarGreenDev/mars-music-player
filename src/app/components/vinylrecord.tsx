@@ -17,7 +17,8 @@ export default function VinylRecord({
     isPlaying,
 }: VinylRecordProps) {
     const rotation = useRef(new Animated.Value(0)).current;
-    const animation = useRef<Animated.CompositeAnimation | null>(null);
+    // Keep the last angle so playback can resume where it paused.
+    const currentRotation = useRef(0);
 
     const spin = rotation.interpolate({
         inputRange: [0, 360],
@@ -25,25 +26,35 @@ export default function VinylRecord({
     });
 
     useEffect(() => {
-        if (isPlaying) {
-            animation.current?.stop();
+        if (!isPlaying) return;
 
-            animation.current = Animated.loop(
-                Animated.timing(rotation, {
-                    toValue: 360,
-                    duration: 3000,
-                    easing: Easing.linear,
-                    useNativeDriver: true,
-                })
-            );
+        let isActive = true;
+        const spin = (from: number) => {
+            // Scale the remaining time to keep the spin speed constant after resuming.
+            const duration = 3000 * (360 - from) / 360;
+            Animated.timing(rotation, {
+                toValue: 360,
+                duration,
+                easing: Easing.linear,
+                useNativeDriver: true,
+            }).start(({ finished }) => {
+                if (!finished || !isActive) return;
 
-            animation.current.start();
-        } else {
-            animation.current?.stop();
-        }
+                // Start another full turn to keep spinning indefinitely.
+                currentRotation.current = 0;
+                rotation.setValue(0);
+                spin(0);
+            });
+        };
+
+        spin(currentRotation.current);
 
         return () => {
-            animation.current?.stop();
+            isActive = false;
+            // Capture the current angle before stopping so the next play resumes smoothly.
+            rotation.stopAnimation((value) => {
+                currentRotation.current = value;
+            });
         };
     }, [isPlaying, rotation]);
 
