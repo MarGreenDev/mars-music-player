@@ -1,7 +1,14 @@
 import { Image, Pressable, StyleSheet, View } from "react-native";
 
+type MediaControlsProps = {
+    isPlaying: boolean;
+    onTogglePlayback: () => void;
+}
 
-export default function MediaControls() {
+export default function MediaControls({
+    isPlaying,
+    onTogglePlayback,
+}: MediaControlsProps) {
 
     return (
         <View style={styles.mediaControlsContainer}>
@@ -11,10 +18,14 @@ export default function MediaControls() {
                 />
 
             </Pressable>
-            <Pressable onPress={() => console.log('pause pressed')}>
+            <Pressable onPress={onTogglePlayback}>
                 <View style={styles.pauseButton}>
                     <Image
-                        source={require('../../../assets/images/icons/pause.png')}
+                        source={
+                            isPlaying
+                                ? require('../../../assets/images/icons/pause.png')
+                                : require('../../../assets/images/icons/pause.png')
+                        }
                         style={styles.pauseButtonIcon}
                     />
                 </View>

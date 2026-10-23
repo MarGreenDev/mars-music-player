@@ -1,11 +1,11 @@
-import { Link, useRouter } from "expo-router";
+import { Link } from "expo-router";
+import { useState } from 'react';
 import { StyleSheet, Text, View } from "react-native";
 import MediaControls from "./components/mediaControls";
 import VinylRecord from "./components/vinylrecord";
 
 export default function Index() {
-  const router = useRouter;
-
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <View style={styles.container}>
 
@@ -17,14 +17,18 @@ export default function Index() {
       </View>
 
       <View style={styles.player}>
-        <VinylRecord />
+        <VinylRecord isPlaying={isPlaying}
+        />
 
         <View>
           <Text style={styles.title}>Now Playing</Text>
           <Text style={styles.artist}>Panic! At The Disco</Text>
         </View>
 
-        <MediaControls />
+        <MediaControls
+          isPlaying={isPlaying}
+          onTogglePlayback={() => setIsPlaying((prev) => !prev)}
+        />
       </View>
     </View>
   );
