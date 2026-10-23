@@ -16,14 +16,16 @@ export default function Index() {
 
       </View>
 
-      <VinylRecord />
+      <View style={styles.player}>
+        <VinylRecord />
 
-      <View>
-        <Text style={styles.title}>Now Playing</Text>
-        <Text style={styles.artist}>Panic! At The Disco</Text>
+        <View>
+          <Text style={styles.title}>Now Playing</Text>
+          <Text style={styles.artist}>Panic! At The Disco</Text>
+        </View>
+
+        <MediaControls />
       </View>
-
-      <MediaControls />
     </View>
   );
 }
@@ -36,6 +38,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 24,
   },
+  player: {
+    alignItems: 'center',
+    gap: 30,
+  },
   songListButton: {
     backgroundColor: 'rgba(140, 91, 62, 0.7)',
     color: '#F5E9D5',
@@ -43,7 +49,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderRadius: 50,
     position: 'absolute',
-    bottom: 80,
+    bottom: 70,
     right: 50,
   },
   vinyl: {
